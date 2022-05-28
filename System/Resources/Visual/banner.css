@@ -1,0 +1,13 @@
+.lst {
+    text-decoration: none;
+}
+
+.social-icon {
+    cursor: pointer;
+}
+
+.ld-banner {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
