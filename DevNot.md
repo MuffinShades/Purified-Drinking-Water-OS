@@ -1,1 +1,1 @@
-To Get the code copy getDaCode.bat and run it
+To Get the code / see the result go to : https://muffinshades.github.io/Purified-Drinking-Water-OS/PurifiedDrinkingWater.html
