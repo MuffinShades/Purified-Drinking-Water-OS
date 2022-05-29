@@ -16,6 +16,19 @@
     list-style: none;
 }
 
+#sb {
+    display: none;
+    cursor: pointer;
+    padding: 5px 30px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background: #ddd;
+}
+
+#sb:hover {
+    background: #ccc;
+}
+
 .banner-image {
     margin: 10%;
     margin-bottom: 2%;
