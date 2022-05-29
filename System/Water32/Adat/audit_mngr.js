@@ -87,3 +87,43 @@ var Audio = {
         }
     }
 }
+setInterval(function() {
+    //audio player
+    for (let i = 0; i < Audio.playing.length; i++) {
+        let aud = Audio.playing[i];
+        if (aud.played == false) {
+            let t = document.getElementById(Audio.id);
+            if (t != null) {
+                let tg = document.createElement('audio');
+                tg.setAttribute('controls', 'none');
+                tg.setAttribute('preload', 'auto');
+                tg.style.display = 'none';
+                tg.playbackRate = aud.playSpeed;
+                let sor = document.createElement('source');
+                sor.src = aud.src;
+                if (aud.volume != 'def' && aud.volume != null && aud.volume != void 0) {
+                    tg.volume = aud.volume;
+                }
+                sor.setAttribute('pindex', i)
+                tg.addEventListener('ended', function() {
+                    if (aud.times <= 0) {
+                        Audio.playing.splice(this.pindex, 1);
+                        aud.onend();
+                        this.remove();
+                    } else {
+                        this.play();
+                        aud.times--;
+                    }
+                });
+                tg.id = 'sound'+aud.id;
+                tg.appendChild(sor);
+                t.appendChild(tg);
+                tg.play();
+                aud.times--;
+                aud.played = true;
+            } else {
+                Audio.LoadErr();
+            }
+        }
+    }
+});
