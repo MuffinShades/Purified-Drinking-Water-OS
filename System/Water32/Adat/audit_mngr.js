@@ -58,7 +58,7 @@ var Audio = {
     },
     LoadErr: function() {
         console.warn(`Still in loading state.`);
-        this.LoadStart();
+        this.init();
     },
     TypeErr: function(fileType) {
         console.error(`TypeError: File type .${fileType} is not supported.`);
@@ -66,6 +66,7 @@ var Audio = {
     init: function(wrapper) {
         if (wrapper) {
             this.wrapper = wrapper;
+            this.status = 2;
         } else {
             document.body.focus();
             let audTag = document.createElement('div');

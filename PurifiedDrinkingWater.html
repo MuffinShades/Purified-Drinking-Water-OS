@@ -22,6 +22,9 @@
                     <img title='Drink Water' alt="Water" src='System/Resources/Icons/ld/banner.jpg' width='300' height='300'>
                 </div>
             </div>
+            <div class='run-button'>
+                <button style='display: none;' id='sb'>Run</button>
+            </div>
             <div class='socials-wrap'>
                 <div class='socials-wrap'>
                     <div class='socials'>
@@ -49,7 +52,7 @@
         <script>
             //load/runtime-start
             (function(){Audio.init(document.querySelector('#audit-wrapper'))}());
-            (function(){let d=document,p=1000,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');let s=document.querySelector('.desktop');window.addEventListener('load',function(a){setTimeout(function(){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';Audio.PlayFile('System/Resources/audio/start_chime_1mp3.mp3', 1, {volume:1})}else{System.ls()}},p)})}());
+            (function(){let d=document,p=1000,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');let s=d.querySelector('.desktop');window.addEventListener('load',function(a){d.querySelector('#sb').style.display='block';setTimeout(function(){d.querySelector('#sb').addEventListener('click',function(e){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';Audio.PlayFile('System/Resources/audio/start_chime_1mp3.mp3', 1, {volume:1})}else{System.ls()}})},p)})}());
         </script>
     </body>
 </html>
