@@ -44,11 +44,12 @@
         <noscript>
             <h1>You gotta have Javascript to use this page... =^._.^=</h1>
         </noscript>
-        <script src=''></script>
+        <script src='System/Water32/Adat/audit_mngr.js'></script>
         <script>localStorage.setItem('Boot_To_Desktop',true)</script>
         <script>
             //load/runtime-start
-            (function(){let d=document,p=1000,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');let s=document.querySelector('.desktop');window.addEventListener('load',function(a){setTimeout(function(){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';}else{System.ls()}},p)})}());
+            (function(){Audio.init(document.querySelector('#audit-wrapper'))}());
+            (function(){let d=document,p=1000,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');let s=document.querySelector('.desktop');window.addEventListener('load',function(a){setTimeout(function(){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';Audio.PlayFile('System/Resources/audio/start_chime_1.mid', 1, {volume:1})}else{System.ls()}},p)})}());
         </script>
     </body>
 </html>
