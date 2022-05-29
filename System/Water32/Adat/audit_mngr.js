@@ -61,7 +61,7 @@ var Audio = {
         this.LoadStart();
     },
     TypeErr: function(fileType) {
-        console.error(`Type ${fileType} is not supported.`);
+        console.error(`TypeError: File type .${fileType} is not supported.`);
     },
     init: function(wrapper) {
         if (wrapper) {
