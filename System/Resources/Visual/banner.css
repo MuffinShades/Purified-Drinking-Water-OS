@@ -20,13 +20,18 @@
     display: none;
     cursor: pointer;
     padding: 5px 30px;
-    border: 1px solid #999;
+    border: 1px solid #285df0ad;
     border-radius: 3px;
     background: #ddd;
+    box-shadow: 0 9px #072fb1;
 }
 
 #sb:hover {
-    background: #ccc;
+    background: #288ff0ad;
+}
+
+#sb:active {
+    box-shadow: 0 5px #052488;
 }
 
 .banner-image {
