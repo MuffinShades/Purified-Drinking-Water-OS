@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html>
-
-<head lang="en" dir="ltr">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name='keywords' content='OS, Windows, Linus, HTML, Javascript, CSS, Bored'>
-    <meta name='description' content="Cool OS Coded in Javascript, HTML, and CSS">
-    <meta name='start-date' content='5/28/2022'>
-    <meta name='version' content='a_00052822'>
-    <title>Purified Drinking Water</title>
-    <link rel='stylesheet' href='System/Resources/Visual/banner.css'>
-    <link rel='stylesheet' href='System/Resources/Visual/Desktop/desk.css'>
-</head>
-
-<body>
-    <div class='desktop'>
-        <img class='background' id='desktop-background' src='System/Resources/Backgrounds/bg_stream.jpg' width='0'
-            height='0'>
-        <div class='desktop-app-container' id='dsk_app'></div>
-        <div class='window-container' id='win-con'></div>
-    </div>
-    <div class='audio-wrap' id='audit-wrapper'></div>
-    <div class='ld-banner'>
-        <div class='banner-title-container'>
-            <div class="banner-title">
-                <h1><i><u>Purified Drinking Water OS</u></i></h1>
-            </div>
+    <head lang="en" dir="ltr">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name='keywords' content='OS, Windows, Linus, HTML, Javascript, CSS, Bored'>
+        <meta name='description' content="Cool OS Coded in Javascript, HTML, and CSS">
+        <meta name='start-date' content='5/28/2022'>
+        <meta name='version' content='a_00052822'>
+        <title>Purified Drinking Water</title>
+        <link rel='stylesheet' href='System/Resources/Visual/banner.css'>
+        <link rel='stylesheet' href='System/Resources/Visual/Desktop/desk.css'>
+    </head>
+    <body>
+        <div class='desktop'>
+            <img class='background' id='desktop-background' src='System/Resources/Backgrounds/bg_stream.jpg' width='0' height='0'>
+            <div class='desktop-app-container' id='dsk_app'></div>
+            <div class='window-container' id='win-con'></div>
         </div>
-        <div class='banner-image-container'>
-            <div class='banner-image'>
-                <img title='Drink Water' alt="Water" src='System/Resources/Icons/ld/banner.jpg' width='300'
-                    height='300'>
-            </div>
-        </div>
-        <div class='run-button'>
-            <center>
-                <button id='sb'>Run</button>
-            </center>
-        </div>
-        <div class='socials-wrap'>
-            <div class='socials-wrap'>
-                <div class='socials'>
-                    <a class='twitter-link' href='https://twitter.com/muffinshades'>
-                        <img class='social-icon' id='banner-twitter' alt='Twitter' src='twittercon.png' title="Berd Man" width="64">
-                    </a>
+        <div class='audio-wrap' id='audit-wrapper'></div>
+        <div class='ld-banner'>
+            <div class='banner-title-container'>
+                <div class="banner-title">
+                    <h1><i><u>Purified Drinking Water OS</u></i></h1>
                 </div>
             </div>
-        </div><br><br><br>
-        <div class='status-wrap'>
-            <div class='status'>
-                <pre>State: Loading...</pre>
+            <div class='banner-image-container'>
+                <div class='banner-image'>
+                    <img title='Drink Water' alt="Water" src='System/Resources/Icons/ld/banner.jpg' width='300' height='300'>
+                </div>
+            </div>
+            <div class='run-button'>
+                <center>
+                    <button id='sb'>Run</button>
+                </center>
+            </div>
+            <div class='socials-wrap'>
+                <div class='socials-wrap'>
+                    <div class='socials'>
+                        <ul class='lst'>
+                            <li>
+                                <a class='twitter-link' href='https://twitter.com/muffinshades'>
+                                    <img class='social-icon' id='banner-twitter' alt='Twitter' src='twittercon.png' title="Berd Man" width="64">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><br><br><br>
+            <div class='status-wrap'>
+                <div class='status'>
+                    <pre>State: Loading...</pre>
+                </div>
             </div>
         </div>
-    </div>
-    <noscript>
-        <h1>You gotta have Javascript to use this page... =^._.^=</h1>
-    </noscript>
-    <script src='System/Water32/Adat/audit_mngr.js'></script>
-    <script>localStorage.setItem('Boot_To_Desktop', true)</script>
-    <script>
+        <noscript>
+            <h1>You gotta have Javascript to use this page... =^._.^=</h1>
+        </noscript>
+        <script src='System/Water32/Adat/audit_mngr.js'></script>
+        <script>localStorage.setItem('Boot_To_Desktop',true)</script>
+        <script>
             //load/runtime-start
-            (function () { Audio.init(document.querySelector('#audit-wrapper')) }());
-        (function () { let d = document, p = 1000, L = localStorage, l = d.querySelector('.ld-banner'), bt_d = L.getItem('Boot_To_Desktop'); let s = d.querySelector('.desktop'); window.addEventListener('load', function (a) { setTimeout(function () { d.querySelector('#sb').style.display = 'block'; d.querySelector('#sb').addEventListener('click', function (e) { if (bt_d || bt_d == 'true') { l.style.display = 'none'; s.style.display = 'block'; Audio.PlayFile('System/Resources/audio/start_chime_1mp3.mp3', 1, { volume: 0.7, speed: 1, }) } else { System.ls() } }) }, p) }) }());
-        (function () { document.querySelector('.background').width = document.documentElement.clientWidth; document.querySelector('.background').height = document.documentElement.clientHeight; })();
-    </script>
-</body>
-
+            (function(){Audio.init(document.querySelector('#audit-wrapper'))}());
+            (function(){let d=document,p=1000,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');let s=d.querySelector('.desktop');window.addEventListener('load',function(a){setTimeout(function(){d.querySelector('#sb').style.display='block';d.querySelector('#sb').addEventListener('click',function(e){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';Audio.PlayFile('System/Resources/audio/start_chime_1mp3.mp3', 1, {volume:0.7,speed:1,})}else{System.ls()}})},p)})}());
+            (function(){document.querySelector('.background').width=document.documentElement.clientWidth;document.querySelector('.background').height=document.documentElement.clientHeight;})();
+        </script>
+    </body>
 </html>
