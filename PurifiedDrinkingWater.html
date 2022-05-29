@@ -42,5 +42,11 @@
         <noscript>
             <h1>You gotta have Javascript to use this page... =^._.^=</h1>
         </noscript>
+        <script src=''></script>
+        <script>localStorage.setItem('Boot_To_Desktop',true)</script>
+        <script>
+            //load/runtime-start
+            (function(){let d=document,L=localStorage,l=d.querySelector('.ld-banner'),bt_d=L.getItem('Boot_To_Desktop');alert(bt_d);let s=document.querySelector('.desktop');window.addEventListener('load',function(a){if(bt_d||bt_d=='true'){l.style.display='none';s.style.display='block';}else{System.ls()}})});
+        </script>
     </body>
 </html>
