@@ -10,6 +10,15 @@ var Text = {
         return a;
     }
 }
+Math.clamp = function(value, min, max) {
+    if (value < min) {
+        return min;
+    } else if (value > max) {
+        return max;
+    } else {
+        return value;
+    }
+}
 var Audio = {
     playing: [],
     audio: [],
@@ -25,7 +34,7 @@ var Audio = {
     PlayFile: function(src, times, settings, onend) {
         if (this.wrapper != null) {
             let srcCheck = src.replaceAll('../', '');
-            if (srcCheck.split('.')[1] == 'mp3' || srcCheck.split('.')[1] == 'wav' || srcCheck.split('.')[1] == 'ogg' || srcCheck.split('.')[1] == 'mid') {
+            if (srcCheck.split('.')[1] == 'mp3' || srcCheck.split('.')[1] == 'wav' || srcCheck.split('.')[1] == 'ogg') {
                 let set = {
                     src:src,
                     loop: times,
@@ -33,7 +42,7 @@ var Audio = {
                     type: src.split('.')[1],
                     times: times,
                     playSpeed: Math.clamp(settings != void 0 ? settings.speed != void 0 ? settings.speed : 1 : 1, 0, 16) || 1,
-                    volume: Math.clamp( settings != void 0 ? settings.volume != void 0 ? settings.volume : 1 : 1, 0, 1) || 'def',
+                    volume: Math.clamp(settings != void 0 ? settings.volume != void 0 ? settings.volume : 1 : 1, 0, 1) || 'def',
                     onend: typeof onend == 'function' ? onend : function() {},
                     id: Audio.freeId,
                 }
