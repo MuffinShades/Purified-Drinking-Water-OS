@@ -22,12 +22,12 @@
     padding: 5px 30px;
     border: 1px solid #285df0ad;
     border-radius: 3px;
-    background: #ddd;
+    background: #dddddd;
     box-shadow: 0 5px #072fb1;
 }
 
 #sb:hover {
-    background: #288ff0ad;
+    background: #ada5a5ddd;
 }
 
 #sb:active {
